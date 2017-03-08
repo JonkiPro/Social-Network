@@ -1,0 +1,79 @@
+#bigLabel {
+    -fx-font-size: 27px;
+}
+
+#label {
+    -fx-font-size: 18px;
+}
+
+#textField {
+    -fx-font-size: 16px;
+}
+
+#btnBack {
+    -fx-background-color: #FF3333;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnBack:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnChange {
+    -fx-background-color: blue;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+#btnChange:hover {
+    -fx-background-color: #00FFFF;
+    -fx-text-fill: white;
+}
+
+#btnCheckCorrectness {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+#btnCheckCorrectness:hover {
+    -fx-background-color: #7FFF00;
+    -fx-text-fill: white;
+}
+
+#labelOK {
+    -fx-text-fill: green;
+    -fx-font-size: 27px;
+}
+
+#gridPaneSuccessEdition {
+}
+
+#btnBackOnGridPaneSuccessEdition {
+    -fx-border-style: solid;
+    -fx-font-size: 32px;
+}
+
+#btnBackOnGridPaneSuccessEdition:hover {
+    -fx-background-color: #66FF00;
+}
+
+#btnChangeAvatar {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnChangeAvatar:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnUploadAvatar {
+    -fx-background-color: transparent;
+}
+
+#btnUploadAvatar:hover {
+    -fx-background-color: #E9E9E9;
+}

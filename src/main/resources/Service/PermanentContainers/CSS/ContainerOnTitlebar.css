@@ -1,0 +1,27 @@
+#hbox {
+    -fx-background-color: black;
+}
+
+#btnMinimize {
+    -fx-background-color: white;
+}
+
+#btnMinimize:hover {
+    -fx-background-color: #00FF33;
+}
+
+#btnMaximize_SizeDown {
+    -fx-background-color: white;
+}
+
+#btnMaximize_SizeDown:hover {
+    -fx-background-color: #00FFFF;
+}
+
+#btnExit {
+    -fx-background-color: white;
+}
+
+#btnExit:hover {
+    -fx-background-color: #FF3300;
+}

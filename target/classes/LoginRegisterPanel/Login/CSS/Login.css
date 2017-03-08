@@ -1,0 +1,32 @@
+#pane {
+    -fx-background-color: white;
+    -fx-border-style: solid;
+}
+
+#btnLogin {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+
+#btnLogin:hover {
+    -fx-background-color: #00FFFF;
+    -fx-text-fill: white;
+}
+
+#btnRegister {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+#btnRegister:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+ }
+
+#labelConnectOK {
+    -fx-text-fill: green;
+}
+
+#labelConnectFailed {
+    -fx-text-fill: red;
+}

@@ -1,0 +1,129 @@
+#bigLabel {
+    -fx-font-size: 27px;
+}
+
+#label {
+    -fx-font-size: 18px;
+}
+
+#textField {
+    -fx-font-size: 16px;
+}
+
+#btnSend {
+    -fx-background-color: green;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+#btnSend:hover {
+    -fx-background-color: #00FFFF;
+    -fx-text-fill: white;
+}
+
+#btnSave {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnSave:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnAddPerson {
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+#btnAddPerson:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnUpdateList {
+    -fx-background-color: #FF0033;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+#btnUpdateList:hover {
+    -fx-background-color: #CC3366;
+    -fx-text-fill: white;
+}
+
+#btnDelete {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnDelete:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnBack {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+#btnBack:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnTreeDotsInTrash {
+    -fx-background-color: transparent;
+}
+
+#btnTreeDotsInTrash:hover {
+    -fx-background-color: gray;
+}
+
+#btnMagnifier {
+    -fx-background-color: transparent;
+}
+
+#btnMagnifier:hover {
+    -fx-background-color: #DCDCDC;
+}
+
+#btnSearchByWord {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnSearchByWord:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+#btnSaveOnStage {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnSaveOnStage:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnSender {
+    -fx-font-size: 20px;
+}
+
+#btnSender:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#btnSenderWithReply {
+    -fx-font-size: 27px;
+}
+
+#btnSenderWithReply:hover {
+    -fx-background-color: #E9E9E9;
+}

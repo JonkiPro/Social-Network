@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/EditMyProfile.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.EditMyProfile.ChangeOtherController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="152.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="152.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="289.0" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="2.0" prefHeight="55.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="116.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label id="bigLabel" text="Sex and date of birth" GridPane.columnSpan="3">
+         <GridPane.margin>
+            <Insets left="15.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label id="label" text="Sex" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <JFXTextField id="textField" fx:id="textYourSex" editable="false" text="male" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></JFXTextField>
+      <Label id="label" text="Date of birth" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <JFXButton id="btnBack" onAction="#back" prefHeight="45.0" prefWidth="72.0" text="BACK" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnChange" fx:id="btnChange" disable="true" onAction="#change" prefHeight="72.0" prefWidth="99.0" text="CHANGE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXToggleButton fx:id="isSelectedSex" onAction="#isSelectedSex" text="New" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </JFXToggleButton>
+      <JFXToggleButton fx:id="isSelectedDateOfBirth" onAction="#isSelectedDateOfBirth" text="New" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </JFXToggleButton>
+      <JFXComboBox id="textField" fx:id="comboBoxSex" disable="true" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="110.0" right="10.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXDatePicker id="textField" fx:id="dateOfBirth" disable="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="110.0" right="10.0" />
+         </GridPane.margin>
+      </JFXDatePicker>
+      <JFXTextField id="textField" fx:id="textYourDateOfBirth" editable="false" text="01.01.2017" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXButton id="btnSettings" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#clear" prefHeight="20.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/service/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="Clear" />
+         </tooltip>
+         <GridPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </GridPane.margin>
+      </JFXButton>
+   </children>
+</GridPane>

@@ -1,0 +1,27 @@
+#labelGlobalPost {
+    -fx-font-size: 24px;
+}
+
+#btnAuthor {
+    -fx-font-size: 20px;
+}
+
+#btnAuthor:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#labelText {
+    -fx-font-size: 15px;
+}
+
+#btnLike:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#btnThreeDots:hover {
+     -fx-background-color: #E9E9E9;
+}
+
+#btnPreview:hover {
+    -fx-background-color: #E9E9E9;
+}

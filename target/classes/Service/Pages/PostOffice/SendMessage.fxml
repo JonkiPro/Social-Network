@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.MaskerPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#showPopOverWhenMouseOnGridPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/PostOffice.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.PostOffice.SendMessageController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="124.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="334.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="141.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="128.0" minHeight="2.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="91.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label id="bigLabel" text="Send message" GridPane.columnSpan="3">
+         <GridPane.margin>
+            <Insets left="15.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets right="30.0" />
+         </GridPane.margin></Separator>
+      <Label id="label" text="Recipients" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin></Label>
+      <Label id="label" text="Topic" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <JFXButton id="btnSave" onAction="#save" prefHeight="1.0" prefWidth="72.0" text="SAVE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <GridPane.margin>
+            <Insets left="160.0" top="20.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <JFXButton id="btnSend" fx:id="btnChange" onAction="#send" prefHeight="49.0" prefWidth="99.0" text="SEND" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField id="textField" fx:id="textSearchPerson" prefHeight="26.0" prefWidth="141.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets right="5.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <JFXButton id="btnAddPerson" onAction="#addPersonToList" prefHeight="36.0" prefWidth="111.0" text="Add person to list" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <GridPane.margin>
+            <Insets right="6.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="4">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="5.0" top="50.0" />
+         </GridPane.margin>
+         <children>
+            <JFXListView id="textField" fx:id="listPersons" prefHeight="290.0" prefWidth="136.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <JFXTextField id="textField" fx:id="textRecipients" minWidth="191.0" prefHeight="31.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="140.0" top="30.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXTextField id="textField" fx:id="textTopic" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="140.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXTextArea id="textField" fx:id="textContents" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="140.0" />
+         </GridPane.margin>
+      </JFXTextArea>
+      <Label id="label" text="Contents" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <JFXComboBox id="textField" fx:id="comboSettingsSearch" onAction="#setToSearch" prefHeight="25.0" prefWidth="86.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="140.0" />
+         </GridPane.margin>
+      </JFXComboBox>
+      <JFXButton id="btnSettings" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#clear" prefHeight="20.0" prefWidth="35.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/service/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="Clear list" />
+         </tooltip>
+         <GridPane.margin>
+            <Insets bottom="16.0" right="10.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <JFXButton id="btnUpdateList" onAction="#updateList" text="Update list &gt;&gt;" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets right="30.0" top="30.0" />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="labelStatusMessage" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <ImageView fx:id="imageViewQuestionMark" fitHeight="32.0" fitWidth="32.0" onMouseEntered="#showInfo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+         <image>
+            <Image url="@../../../images/service/questionMark.png" />
+         </image>
+         <GridPane.margin>
+            <Insets right="10.0" top="10.0" />
+         </GridPane.margin>
+      </ImageView>
+      <MaskerPane fx:id="maskerPane" text="" visible="false" GridPane.columnSpan="3" GridPane.rowSpan="5" />
+      <JFXButton id="btnSaveOnStage" onAction="#loadMessage" text="L&#10;O&#10;A&#10;D&#10;&#10;M&#10;E&#10;S&#10;S&#10;A&#10;G&#10;E" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="TOP">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="9.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="75.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton id="btnSaveOnStage" onAction="#saveOnStage" text="S&#10;A&#10;V&#10;E&#10;&#10;O&#10;N&#10;&#10;S&#10;T&#10;A&#10;G&#10;E" GridPane.rowIndex="2" GridPane.rowSpan="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="9.0" />
+         </font>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+      </JFXButton>
+   </children>
+</GridPane>

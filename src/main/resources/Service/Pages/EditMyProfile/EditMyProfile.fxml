@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/EditMyProfile.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.EditMyProfile.EditMyProfileController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="208.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="192.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label id="bigLabel" text="Edit my profile">
+         <GridPane.margin>
+            <Insets left="20.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label id="label" text="Name and Last name" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Label id="label" fx:id="labelNameAndLastName" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Hyperlink id="label" onAction="#changeNameAndLastName" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Separator>
+      <Label id="label" text="Login" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label id="label" fx:id="labelLogin" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Hyperlink id="label" onAction="#changeLogin" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label id="label" text="Password" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label id="label" fx:id="labelPassword" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Hyperlink id="label" onAction="#changePassword" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label id="label" text="E-mail" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Label id="label" fx:id="labelEmail" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Hyperlink id="label" onAction="#changeEmail" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Separator>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Separator>
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin>
+      </Separator>
+      <Label id="label" text="Other" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Label id="label" text="..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Hyperlink id="label" onAction="#changeOther" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Label id="label" text="Question and answer" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </Separator>
+      <Hyperlink id="label" onAction="#changeQuestionAndAnswer" text="Change" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Label id="label" fx:id="labelQuestionAndAnswer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Hyperlink onAction="#otherData" text="Other data" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </Hyperlink>
+   </children>
+</GridPane>

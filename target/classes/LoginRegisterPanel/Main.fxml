@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegisterPanel.Controller.MainController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="320.0" prefWidth="300.0">
+         <top>
+            <Pane prefHeight="27.0" prefWidth="300.0" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="300.0" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/titleBarLogin.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton id="btnExit" layoutX="260.0" layoutY="3.0" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#exit" prefHeight="20.0" prefWidth="35.0" text="Button">
+                     <graphic>
+                        <ImageView id="btnRegister" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton id="btnMinimize" layoutX="221.0" layoutY="3.0" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#minimize" prefHeight="20.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label id="labelOnTitleBar" layoutX="28.0" layoutY="5.0" onMouseDragged="#mouseDraggedOnLabel" onMousePressed="#mousePressedOnLabel" text="Social Network" />
+                  <Button layoutX="6.0" layoutY="5.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/favicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#minimize" text="Minimize" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

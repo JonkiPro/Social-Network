@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/Search.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.Search.SearchController">
+    <children>
+        <Label id="bigLabel" layoutX="10.0" layoutY="10.0" text="Search term:" />
+        <Separator layoutY="93.0" prefWidth="200.0" stylesheets="@../PostOffice/CSS/PostOffice.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" />
+      <JFXTextField fx:id="textSearch" labelFloat="true" layoutX="185.0" layoutY="19.0" maxWidth="309.0" minWidth="1.0" prefHeight="31.0" prefWidth="149.0" promptText="Search" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="266.0" />
+      <JFXComboBox fx:id="comboSearch" layoutX="435.0" layoutY="20.0" AnchorPane.rightAnchor="109.0" />
+      <JFXButton id="btnMagnifier" layoutX="518.0" layoutY="19.0" maxHeight="20.0" maxWidth="35.0" minHeight="24.0" minWidth="24.0" onAction="#search" prefHeight="20.0" prefWidth="35.0" AnchorPane.rightAnchor="47.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label id="labelFriends" layoutX="36.0" layoutY="55.0" text="My friends" />
+      <Label id="labelFriends" layoutX="500.0" layoutY="55.0" text="All people" AnchorPane.rightAnchor="46.0" />
+      <SplitPane dividerPositions="0.5" layoutY="93.0" prefHeight="307.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane id="scrollPane" prefHeight="305.0" prefWidth="296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox id="vbox" fx:id="vboxMyFriends" prefHeight="200.0" prefWidth="182.0" spacing="20.0">
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ScrollPane id="scrollPane" prefHeight="338.0" prefWidth="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <VBox id="vbox" fx:id="vboxAllPeople" prefHeight="200.0" prefWidth="182.0" spacing="20.0">
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                           </padding></VBox>
+                     </content>
+                     <padding>
+                        <Insets top="1.0" />
+                     </padding></ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>

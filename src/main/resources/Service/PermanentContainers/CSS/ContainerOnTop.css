@@ -1,0 +1,31 @@
+#anchorPane {
+    -fx-background-color: white;
+}
+
+#btnMagnifier {
+    -fx-background-color: transparent;
+}
+
+#btnMagnifier:hover {
+    -fx-background-color: #DCDCDC;
+}
+
+#btnSettings {
+    -fx-background-color: transparent;
+}
+
+#btnSettings:hover {
+    -fx-background-color: #DCDCDC;
+}
+
+#labelName {
+    -fx-background-color: transparent;
+}
+
+#labelName:hover {
+    -fx-background-color: #DCDCDC;
+}
+
+#btnProfile:hover {
+    -fx-background-color: #DCDCDC;
+}

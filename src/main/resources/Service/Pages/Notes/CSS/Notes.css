@@ -1,0 +1,72 @@
+#btnDelete {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnDelete:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnAddNew {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnAddNew:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnSave {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#btnSave:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnTreeDotsInTrash {
+    -fx-background-color: transparent;
+}
+
+#btnTreeDotsInTrash:hover {
+    -fx-background-color: gray;
+}
+
+#btnSearchByWord {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnSearchByWord:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+#btnMagnifier {
+    -fx-background-color: transparent;
+}
+
+#btnMagnifier:hover {
+    -fx-background-color: #DCDCDC;
+}
+
+#btnSaveOnStage {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnSaveOnStage:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#textTitle {
+   -fx-font-size: 15px;
+}

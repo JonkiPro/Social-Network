@@ -1,0 +1,19 @@
+#labelOnTitleBar {
+    -fx-text-fill: white;
+}
+
+#btnMinimize {
+    -fx-background-color: white;
+}
+
+#btnMinimize:hover {
+    -fx-background-color: #DEDEDE;
+}
+
+#btnExit {
+    -fx-background-color: white;
+}
+
+#btnExit:hover {
+    -fx-background-color: #DEDEDE;
+}

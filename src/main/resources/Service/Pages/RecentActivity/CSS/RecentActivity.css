@@ -1,0 +1,23 @@
+#bigLabel {
+    -fx-font-size: 27px;
+}
+
+#btnLogger {
+    -fx-font-size: 24px;
+    -fx-background-color: transparent;
+}
+
+#btnLogger:hover {
+    -fx-font-size: 24px;
+    -fx-background-color: #E9E9E9;
+}
+
+#btnExportToStage {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnExportToStage:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}

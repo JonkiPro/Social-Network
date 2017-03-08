@@ -1,0 +1,15 @@
+#bigLabel {
+    -fx-font-size: 27px;
+}
+
+#labelResult {
+    -fx-font-size: 23px;
+}
+
+#button {
+    -fx-font-size: 20px;
+}
+
+#button:hover {
+    -fx-background-color: #EFEFEF;
+}

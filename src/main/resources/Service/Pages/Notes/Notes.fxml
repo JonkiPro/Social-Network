@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/Notes.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.Notes.NotesController">
+   <children>
+      <Label id="bigLabel" layoutX="10.0" layoutY="10.0" stylesheets="@../PostOffice/CSS/PostOffice.css" text="Notes" />
+      <Separator layoutY="60.0" prefWidth="200.0" stylesheets="@../PostOffice/CSS/PostOffice.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" />
+      <TreeTableView fx:id="treeTableView" layoutY="63.0" onMouseClicked="#rightClickOnTreeTableView" prefHeight="337.0" prefWidth="190.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="60.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TreeTableView>
+      <JFXButton id="btnDelete" fx:id="btnDelete" disable="true" layoutX="474.0" layoutY="10.0" onAction="#delete" prefHeight="39.0" prefWidth="74.0" text="DELETE" AnchorPane.rightAnchor="52.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Button id="btnTreeDotsInTrash" fx:id="btnThreeDots" layoutX="572.0" layoutY="10.0" minWidth="12.0" mnemonicParsing="false" onMouseClicked="#threeDotsShowMenu" prefWidth="17.0" AnchorPane.rightAnchor="11.0">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/service/threeDotcoms.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXTextField fx:id="textSearch" labelFloat="true" layoutX="98.0" layoutY="17.0" maxWidth="89.0" minWidth="35.0" onKeyReleased="#keyReleasedInTextSearch" prefHeight="31.0" prefWidth="35.0" promptText="Search" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="467.0" />
+      <JFXButton id="btnMagnifier" layoutX="147.0" layoutY="21.0" maxHeight="20.0" maxWidth="35.0" minHeight="24.0" minWidth="24.0" onAction="#search" prefHeight="20.0" prefWidth="35.0" AnchorPane.rightAnchor="418.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField id="textTitle" fx:id="textTitle" layoutX="207.0" layoutY="72.0" maxWidth="386.0" minWidth="251.0" prefHeight="37.0" prefWidth="251.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="72.0" />
+      <JFXTextArea fx:id="textContents" layoutX="213.0" layoutY="124.0" maxWidth="436.0" minWidth="298.0" prefHeight="219.0" prefWidth="374.0" wrapText="true" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="124.0" />
+      <JFXButton id="btnAddNew" layoutX="355.0" layoutY="10.0" onAction="#addNew" prefHeight="39.0" prefWidth="97.0" text="ADD NEW" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="10.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnSave" fx:id="btnSave" disable="true" layoutX="258.0" layoutY="10.0" onAction="#save" prefHeight="39.0" prefWidth="71.0" text="SAVE" AnchorPane.rightAnchor="271.0" AnchorPane.topAnchor="10.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label fx:id="labelDate" layoutX="585.0" layoutY="88.0" text="12.12.1997 12:12:12" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="88.0" />
+      <Label layoutX="213.0" layoutY="361.0" text="Find word:" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="213.0" />
+      <JFXTextField fx:id="textSearchByWord" layoutX="269.0" layoutY="354.0" maxWidth="97.0" minWidth="97.0" prefHeight="31.0" prefWidth="97.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="269.0" />
+      <JFXButton id="btnSearchByWord" layoutX="370.0" layoutY="357.0" onAction="#searchByWord" text="SEARCH" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="370.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnSaveOnStage" fx:id="btnSaveOnStage" disable="true" layoutX="445.0" layoutY="357.0" onAction="#saveOnStage" text="SAVE ON STAGE" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="445.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXSlider fx:id="sliderFontSize" layoutX="628.0" layoutY="363.0" prefHeight="14.0" prefWidth="110.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="628.0" />
+      <JFXButton id="btnSaveOnStage" layoutX="557.0" layoutY="357.0" onAction="#loadWithStage" text="LOAD" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="557.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <TextField fx:id="textFontSize" layoutX="759.0" layoutY="358.0" onKeyReleased="#keyReleasedInTextFontSize" prefHeight="25.0" prefWidth="35.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="759.0" />
+   </children>
+</AnchorPane>

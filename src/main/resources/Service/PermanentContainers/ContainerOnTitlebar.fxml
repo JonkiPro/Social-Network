@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox id="hbox" fx:id="hbox" alignment="TOP_RIGHT" onMouseClicked="#mouseClicked" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="25.0" prefWidth="600.0" stylesheets="@CSS/ContainerOnTitlebar.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.PermanentContainers.ContainerOnTitlebarController">
+   <children>
+      <JFXButton id="btnMinimize" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#minimize" prefHeight="20.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/minimize.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <HBox.margin>
+            <Insets right="3.0" />
+         </HBox.margin>
+         <tooltip>
+            <Tooltip text="Minimize" />
+         </tooltip>
+      </JFXButton>
+      <JFXButton id="btnMaximize_SizeDown" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#maximize_sizeDown" prefHeight="20.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/maximize.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <HBox.margin>
+            <Insets right="3.0" />
+         </HBox.margin>
+         <tooltip>
+            <Tooltip text="Maximize/Resize" />
+         </tooltip>
+      </JFXButton>
+      <JFXButton id="btnExit" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#exit" prefHeight="20.0" prefWidth="35.0" text="Button">
+         <graphic>
+            <ImageView id="btnRegister" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <HBox.margin>
+            <Insets right="4.0" />
+         </HBox.margin>
+         <tooltip>
+            <Tooltip text="Exit" />
+         </tooltip>
+      </JFXButton>
+   </children>
+</HBox>

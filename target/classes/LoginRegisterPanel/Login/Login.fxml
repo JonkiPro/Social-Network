@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="pane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showPopupMenu" prefHeight="293.0" prefWidth="300.0" stylesheets="@CSS/Login.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegisterPanel.Controller.Login.LoginController">
+   <children>
+      <Label fx:id="labelLogin" layoutX="57.0" layoutY="48.0" text="%label.login" />
+      <Label fx:id="labelPassword" layoutX="57.0" layoutY="115.0" text="%label.password" />
+      <Hyperlink fx:id="hyperlinkForgotPassword" disable="true" layoutX="4.0" layoutY="268.0" onAction="#passwordReminder" text="%hyperlink.forgotPassword" />
+      <JFXTextField fx:id="textLogin" layoutX="57.0" layoutY="73.0" promptText="Login" />
+      <JFXButton id="btnLogin" fx:id="btnLogin" buttonType="RAISED" disable="true" layoutX="64.0" layoutY="228.0" onAction="#login" prefHeight="36.0" prefWidth="87.0" text="%button.login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnRegister" fx:id="btnRegister" buttonType="RAISED" disable="true" layoutX="201.0" layoutY="233.0" onAction="#register" text="%button.register">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXCheckBox fx:id="checkBoxRememberPassword" layoutX="41.0" layoutY="191.0" text="%checkBox.rememberPassword" />
+      <JFXPasswordField fx:id="textPassword" layoutX="57.0" layoutY="140.0" promptText="%label.password2" />
+      <JFXComboBox fx:id="comboLanguages" layoutX="221.0" layoutY="17.0" onAction="#changeLanguage">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label fx:id="labelConnectionToServer" layoutX="8.0" layoutY="9.0" text="%label.connectionToServer" />
+      <Label id="labelConnectOK" fx:id="labelConnectionOK" layoutX="147.0" layoutY="10.0" onMouseEntered="#mouseEnteredOnLabelConnectionStatus" text="OK" visible="false" />
+      <Label id="labelConnectFailed" fx:id="labelConnectionFailed" layoutX="147.0" layoutY="10.0" onMouseEntered="#mouseEnteredOnLabelConnectionStatus" text="%label.connectionFailed" visible="false" />
+      <JFXSpinner fx:id="loadSpinner" layoutX="147.0" layoutY="3.0" />
+      <JFXPopup fx:id="popupMenu" layoutX="242.0" layoutY="140.0" />
+   </children>
+</Pane>

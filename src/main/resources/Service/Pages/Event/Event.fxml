@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/Event.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.Event.EventController">
+    <children>
+      <Label id="labelEvents" layoutX="311.0" prefHeight="35.0" prefWidth="85.0" text="EVENTS" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="204.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutY="58.0" prefHeight="508.0" prefWidth="170.0" AnchorPane.bottomAnchor="-166.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="58.0">
+         <children>
+            <Label id="labelNewEvent" text="NEW EVENT">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField fx:id="textTitle" labelFloat="true" promptText="Title" unFocusColor="#4d4d4d">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXDatePicker fx:id="datePickerStart" editable="false" promptText="Date start">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="datePickerTimeStart" editable="false" promptText="Time start" showTime="true">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="datePickerFinish" editable="false" promptText="Date finish">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXDatePicker fx:id="datePickerTimeFinish" editable="false" promptText="Time finish" showTime="true">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXDatePicker>
+            <JFXTextField fx:id="textLocalization" labelFloat="true" promptText="Localization">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextArea fx:id="textDescription" labelFloat="true" prefHeight="82.0" prefWidth="557.0" promptText="Description" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <JFXButton id="btnAdd" onAction="#add" text="ADD">
+               <VBox.margin>
+                  <Insets left="50.0" top="30.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ScrollPane layoutX="201.0" layoutY="81.0" prefHeight="316.0" prefWidth="396.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="81.0">
+         <content>
+            <VBox fx:id="vboxForEvents" prefHeight="200.0" prefWidth="100.0" />
+         </content>
+      </ScrollPane>
+      <JFXCheckBox fx:id="checkBoxOnlyMeAndMyFriends" layoutX="361.0" layoutY="58.0" onAction="#checkBoxOnlyMeAndMyFriends" text="Only me and my friends" AnchorPane.leftAnchor="361.0" AnchorPane.topAnchor="58.0" />
+      <JFXCheckBox fx:id="checkBoxAll" disable="true" layoutX="262.0" layoutY="58.0" onAction="#checkBoxAll" selected="true" text="All" AnchorPane.leftAnchor="262.0" AnchorPane.topAnchor="58.0" />
+      <Separator layoutY="34.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+    </children>
+</AnchorPane>

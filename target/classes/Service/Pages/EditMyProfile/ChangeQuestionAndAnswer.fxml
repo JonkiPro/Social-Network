@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/EditMyProfile.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.EditMyProfile.ChangeQuestionAndAnswerController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="152.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="170.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="278.0" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="2.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="288.0" minHeight="0.0" prefHeight="94.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label id="bigLabel" text="Change question and answer" GridPane.columnSpan="3">
+         <GridPane.margin>
+            <Insets left="15.0" top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label id="label" text="Question" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <JFXTextField id="textField" fx:id="textYourQuestion" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin></JFXTextField>
+      <JFXTextField id="textField" fx:id="textQuestion" disable="true" labelFloat="true" promptText="Question" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="110.0" right="10.0" />
+         </GridPane.margin></JFXTextField>
+      <Label id="label" text="Answer" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <JFXTextField id="textField" fx:id="textYourAnswer" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXTextField id="textField" fx:id="textAnswer" disable="true" labelFloat="true" promptText="Answer" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="110.0" right="10.0" />
+         </GridPane.margin>
+      </JFXTextField>
+      <JFXButton id="btnBack" onAction="#back" prefHeight="45.0" prefWidth="72.0" text="BACK" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnChange" fx:id="btnChange" disable="true" onAction="#change" prefHeight="72.0" prefWidth="99.0" text="CHANGE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="15.0" />
+         </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXToggleButton fx:id="isSelectedQuestion" onAction="#isSelectedQuestion" text="New" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </JFXToggleButton>
+      <JFXToggleButton fx:id="isSelectedAnswer" onAction="#isSelectedAnswer" text="New" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </JFXToggleButton>
+      <Label text="Security question and the answer may be useful to you to recover your password when you forget it.&#10;This is the recommended option." GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <JFXButton id="btnSettings" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#clear" prefHeight="20.0" prefWidth="35.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/service/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="Clear" />
+         </tooltip>
+         <GridPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <ImageView fx:id="imageViewQuestionMark" fitHeight="32.0" fitWidth="32.0" onMouseEntered="#showInfo" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+         <image>
+            <Image url="@../../../images/service/questionMark.png" />
+         </image>
+         <GridPane.margin>
+            <Insets bottom="5.0" right="10.0" />
+         </GridPane.margin>
+      </ImageView>
+   </children>
+</GridPane>

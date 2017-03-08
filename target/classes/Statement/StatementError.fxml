@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="pane" maxHeight="-Infinity" maxWidth="185.0" minHeight="-Infinity" minWidth="185.0" prefHeight="150.0" prefWidth="185.0" stylesheets="@CSS/Statement.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Statement.Controller.StatementErrorController">
+   <children>
+      <JFXButton id="btnOK" buttonType="RAISED" layoutX="49.0" layoutY="111.0" onAction="#ok" prefHeight="25.0" prefWidth="73.0" ripplerFill="#e80000" stylesheets="@CSS/StatementError.css" text="OK" />
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="122.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/massage/error.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="67.0" text="Error" />
+      <ImageView fitHeight="25.0" fitWidth="192.0" onMouseDragged="#mouseDragged" onMouseMoved="#mousePressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/massage/titleBarMessage.png" />
+         </image>
+      </ImageView>
+      <JFXButton id="btnExit" layoutX="146.0" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#exit" prefHeight="20.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Hyperlink fx:id="hyperlinkIDError" layoutX="63.0" layoutY="64.0" />
+   </children>
+</Pane>

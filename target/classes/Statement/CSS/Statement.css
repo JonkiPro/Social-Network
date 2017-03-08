@@ -1,0 +1,12 @@
+#pane {
+    -fx-background-color: white;
+    -fx-border-style: solid;
+}
+
+#btnExit {
+    -fx-background-color: white;
+}
+
+#btnExit:hover {
+    -fx-background-color: #DEDEDE;
+}

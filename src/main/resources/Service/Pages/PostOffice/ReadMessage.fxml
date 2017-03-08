@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/PostOffice.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.PostOffice.ReadMessageController">
+    <children>
+        <Label id="bigLabel" layoutX="10.0" layoutY="10.0" stylesheets="@CSS/PostOffice.css" text="Read message" />
+        <Separator layoutY="60.0" prefWidth="200.0" stylesheets="@CSS/PostOffice.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" />
+        <TreeTableView fx:id="treeTableView" layoutY="63.0" prefHeight="340.0" prefWidth="600.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="60.0">
+            <columnResizePolicy>
+                <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy></TreeTableView>
+        <JFXButton id="btnDelete" fx:id="btnDelete" disable="true" layoutX="474.0" layoutY="10.0" onAction="#delete" prefHeight="39.0" prefWidth="74.0" text="DELETE" AnchorPane.rightAnchor="52.0" />
+      <Button id="btnTreeDotsInTrash" fx:id="btnThreeDots" layoutX="572.0" layoutY="10.0" minWidth="12.0" mnemonicParsing="false" onMouseClicked="#threeDotsShowMenu" prefWidth="17.0" AnchorPane.rightAnchor="11.0">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/service/threeDotcoms.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXTextField fx:id="textSearch" labelFloat="true" layoutX="204.0" layoutY="19.0" maxWidth="89.0" minWidth="35.0" onKeyReleased="#keyReleasedInTextSearch" prefHeight="31.0" prefWidth="35.0" promptText="Search" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="361.0" />
+      <JFXComboBox fx:id="comboSearch" layoutX="300.0" layoutY="19.0" onAction="#changeOptionSearch" AnchorPane.rightAnchor="244.0" />
+      <JFXButton id="btnMagnifier" layoutX="373.0" layoutY="20.0" maxHeight="20.0" maxWidth="35.0" minHeight="24.0" minWidth="24.0" onAction="#search" prefHeight="20.0" prefWidth="35.0" AnchorPane.rightAnchor="192.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+    </children>
+</AnchorPane>

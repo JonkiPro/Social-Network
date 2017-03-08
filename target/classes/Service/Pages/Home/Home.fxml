@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/Home.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.Home.HomeController">
+    <children>
+      <ScrollPane layoutY="6.0" prefHeight="391.0" prefWidth="594.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+         <content>
+            <HBox prefHeight="391.0" prefWidth="592.0">
+               <children>
+                  <VBox fx:id="vboxForCheckBox" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox fx:id="checkboxAll" disable="true" onAction="#checkboxAll" selected="true" text="All">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkboxOnlyMine" onAction="#checkboxOnlyMine" text="Only mine" />
+                        <JFXCheckBox fx:id="checkboxJustFriends" onAction="#checkboxJustFriends" text="Just friends" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7caca" height="20.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+                              <Label text="Report!">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children></VBox>
+                  <VBox fx:id="vboxForPosts" prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

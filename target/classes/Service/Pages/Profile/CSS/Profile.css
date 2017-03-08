@@ -1,0 +1,72 @@
+#buttonMenu {
+    -fx-font-size: 26px;
+}
+
+#buttonMenu:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#buttonEdit:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#labelMyData {
+    -fx-font-weight: bold;
+}
+
+#vboxData {
+    -fx-border-style: solid;
+    -fx-border-color: #C0C0C0ff;
+}
+
+#labelInMyData {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+#btnSend {
+    -fx-font-size: 24px;
+    -fx-background-color: #00FF33;
+}
+
+#btnSend:hover {
+    -fx-background-color: #FF6633;
+}
+
+#btnAuthor {
+    -fx-font-size: 20px;
+}
+
+#btnAuthor:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#labelText {
+    -fx-font-size: 15px;
+}
+
+#btnLike:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#btnThreeDots:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#btnSendMessage {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnSendMessage:hover {
+    -fx-background-color: #E9E9E9;
+    -fx-text-fill: black;
+}
+
+#btnUploadText:hover {
+    -fx-background-color: #E9E9E9;
+}
+
+#btnPreview:hover {
+    -fx-background-color: #E9E9E9;
+}

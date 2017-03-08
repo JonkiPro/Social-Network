@@ -1,0 +1,18 @@
+#labelEvents {
+    -fx-font-size: 24px;
+}
+
+#labelNewEvent {
+    -fx-font-size: 18px;
+}
+
+#btnAdd {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+}
+
+#btnAdd:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPopup?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="pane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showPopupMenu" prefHeight="293.0" prefWidth="300.0" stylesheets="@CSS/Register.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegisterPanel.Controller.Register.RegisterController_Step2">
+   <children>
+      <Label layoutX="28.0" layoutY="81.0" text="%label.name" />
+      <Label id="labelBig" layoutX="28.0" layoutY="23.0" text="%label.personalData" />
+      <Label layoutX="162.0" layoutY="81.0" text="%label.lastName" />
+      <Label layoutX="162.0" layoutY="145.0" text="%label.sex" />
+      <Label layoutX="28.0" layoutY="145.0" text="%label.dateOfBirth" />
+      <Hyperlink layoutX="-1.0" layoutY="268.0" onAction="#backToLogin" text="%hyperlink.backToLogin" />
+      <Label id="levelStep" fx:id="labelStep" layoutX="248.0" layoutY="23.0" onMouseEntered="#mouseEnteredOnLabelStep" text="2/5" />
+      <Separator layoutX="15.0" layoutY="66.0" prefWidth="200.0" />
+      <Separator layoutX="240.0" layoutY="16.0" orientation="VERTICAL" prefHeight="50.0" />
+      <JFXTextField fx:id="textName" layoutX="23.0" layoutY="105.0" maxWidth="124.0" minWidth="101.0" prefHeight="31.0" prefWidth="101.0" promptText="%label.name" />
+      <JFXTextField fx:id="textLastName" layoutX="159.0" layoutY="105.0" maxWidth="124.0" minWidth="101.0" prefHeight="31.0" prefWidth="101.0" promptText="%label.lastName" />
+      <JFXComboBox fx:id="comboSex" layoutX="166.0" layoutY="173.0" prefHeight="25.0" prefWidth="87.0" />
+      <JFXButton id="btnNext" fx:id="btnNext" buttonType="RAISED" disable="true" layoutX="169.0" layoutY="231.0" onAction="#next" prefHeight="36.0" prefWidth="87.0" text="%button.nextStep">
+         <tooltip>
+            <Tooltip text="%tooltip.nextEmail" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="btnBack" buttonType="RAISED" layoutX="28.0" layoutY="237.0" onAction="#back" text="%button.back">
+         <tooltip>
+            <Tooltip text="%tooltip.previousLogin" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="dateOfBirth" layoutX="23.0" layoutY="173.0" prefHeight="31.0" prefWidth="109.0" />
+      <JFXPopup fx:id="popupMenu" layoutX="15.0" layoutY="105.0" />
+   </children>
+</Pane>

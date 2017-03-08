@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="300.0" stylesheets="@CSS/Register.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginRegisterPanel.Controller.Register.RegisterController_Step6">
+    <children>
+        <Label id="labelBig" layoutX="86.0" layoutY="23.0" text="CAPTCHA" />
+        <Separator layoutX="15.0" layoutY="67.0" prefWidth="270.0" />
+        <Label id="captcha" fx:id="labelCAPTCHA" layoutX="84.0" layoutY="98.0" stylesheets="@CSS/Register.css" />
+        <Label id="statementNOTOK" fx:id="labelNOTOK" layoutX="15.0" layoutY="165.0" text="NOT OK" visible="false" />
+        <Hyperlink layoutX="-1.0" layoutY="268.0" onAction="#backToLogin" text="%hyperlink.backToLogin" />
+      <JFXTextField fx:id="textCAPTCHA" layoutX="66.0" layoutY="161.0" promptText="CAPTCHA" />
+      <JFXButton id="btnClear" fx:id="btnRefresh" layoutX="233.0" layoutY="164.0" maxHeight="20.0" maxWidth="35.0" minHeight="20.0" minWidth="20.0" onAction="#refresh" prefHeight="20.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/reload.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="%button.refresh" />
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="btnNext" fx:id="btnFinish" buttonType="RAISED" layoutX="169.0" layoutY="231.0" onAction="#finish" prefHeight="36.0" prefWidth="87.0" text="%button.finish">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnBack" buttonType="RAISED" layoutX="28.0" layoutY="237.0" onAction="#back" text="%button.back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+    </children>
+</Pane>

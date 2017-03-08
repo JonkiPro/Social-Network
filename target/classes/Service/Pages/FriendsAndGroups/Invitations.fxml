@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/Friends.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.FriendsAndGroups.InvitationsController">
+    <children>
+        <Label id="bigLabel" layoutX="10.0" layoutY="10.0" text="Search term:" />
+        <Separator layoutY="55.0" prefWidth="200.0" stylesheets="@../PostOffice/CSS/PostOffice.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" />
+      <JFXTextField fx:id="textSearch" labelFloat="true" layoutX="185.0" layoutY="19.0" maxWidth="309.0" minWidth="1.0" onKeyReleased="#keyReleasedOnTextSearch" prefHeight="31.0" prefWidth="149.0" promptText="Search" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="266.0" />
+      <JFXComboBox fx:id="comboSearch" layoutX="435.0" layoutY="20.0" onAction="#search" AnchorPane.rightAnchor="109.0" />
+      <JFXButton id="btnMagnifier" layoutX="518.0" layoutY="19.0" maxHeight="20.0" maxWidth="35.0" minHeight="24.0" minWidth="24.0" onAction="#search" prefHeight="20.0" prefWidth="35.0" AnchorPane.rightAnchor="47.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ScrollPane fx:id="scrollPane" layoutY="102.0" prefHeight="295.0" prefWidth="594.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="102.0">
+         <content>
+            <JFXMasonryPane fx:id="masonryPane" prefHeight="325.0" prefWidth="591.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></JFXMasonryPane>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="57.0">
+         <children>
+            <Label id="labelResult" text="Result:" />
+            <Label id="labelResult" fx:id="labelNumberOfResult">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton id="button" fx:id="buttonFriends" onAction="#btnFriends" text="Friends">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </JFXButton>
+            <Label fx:id="labelNumberOfFriends" />
+            <JFXButton id="button" fx:id="buttonInvitations" text="Invitations" />
+            <Label fx:id="labelNumberOfInvitations" />
+            <JFXButton id="button" fx:id="buttonYourInvitations" onAction="#btnYourInvitations" text="Your invitations" />
+            <Label fx:id="labelNumberOfYourInvitations" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

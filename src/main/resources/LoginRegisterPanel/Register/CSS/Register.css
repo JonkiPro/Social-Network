@@ -1,0 +1,79 @@
+#labelBig {
+    -fx-font-size: 25px;
+}
+
+#levelStep {
+    -fx-font-size: 25px;
+}
+
+#pane {
+    -fx-background-color: white;
+    -fx-border-style: solid;
+}
+
+#btnNext {
+    -fx-background-color: blue;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+#btnNext:hover {
+    -fx-background-color: #00FFFF;
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+#btnBack {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+#btnBack:hover {
+    -fx-background-color: #FF8C00;
+    -fx-text-fill: white;
+}
+
+#btnCheckCorrectness {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+#btnCheckCorrectness:hover {
+    -fx-background-color: #7FFF00;
+    -fx-text-fill: white;
+}
+
+#statementOK {
+    -fx-text-fill: green;
+}
+
+#statementNOTOK {
+    -fx-text-fill: red;
+}
+
+#captcha {
+    -fx-font-size: 20px;
+}
+
+#labelLoginExists {
+    -fx-text-fill: red;
+}
+
+#btnClear {
+    -fx-background-color: #C0C0C0;
+}
+
+#paneSuccessfully {
+    -fx-background-color: linear-gradient(#66FF00, white);
+    -fx-border-style: solid;
+}
+
+#paneFailed {
+    -fx-background-color: linear-gradient(red, white);
+    -fx-border-style: solid;
+}
+
+#btnGoTheAccount {
+    -fx-font-size: 22px;
+    -fx-border-style: solid;
+}

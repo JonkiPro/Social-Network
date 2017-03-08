@@ -1,0 +1,23 @@
+#bigLabel {
+    -fx-font-size: 27px;
+}
+
+#labelFriends {
+    -fx-font-size: 21px;
+}
+
+#vbox {
+    -fx-background-color: white;
+}
+
+#scrollPane {
+    -fx-background: white;
+}
+
+#btnNumberOfFriends {
+    -fx-background-color: transparent;
+}
+
+#btnNumberOfFriends:hover {
+    -fx-background-color: white;
+}

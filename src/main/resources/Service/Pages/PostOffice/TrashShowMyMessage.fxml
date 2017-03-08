@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@CSS/PostOffice.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Service.Controller.Pages.PostOffice.TrashShowMyMessageController">
+   <children>
+      <Label id="bigLabel" layoutX="10.0" layoutY="10.0" stylesheets="@CSS/PostOffice.css" text="Show message" />
+      <Separator layoutY="60.0" prefWidth="200.0" stylesheets="@CSS/PostOffice.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label id="label" layoutX="52.0" layoutY="80.0" text="Recipients:" />
+      <Label id="label" fx:id="senderName" layoutX="242.0" layoutY="80.0" />
+      <JFXTextField id="textField" fx:id="textTopic" editable="false" layoutX="166.0" layoutY="131.0" maxWidth="426.0" minWidth="426.0" prefHeight="31.0" prefWidth="426.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="8.0" />
+      <JFXTextArea id="textField" fx:id="textContents" editable="false" layoutX="174.0" layoutY="187.0" maxWidth="410.0" minWidth="349.0" prefHeight="197.0" prefWidth="410.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="187.0" />
+      <JFXButton id="btnDelete" layoutX="48.0" layoutY="286.0" onAction="#delete" prefHeight="39.0" prefWidth="74.0" text="DELETE" AnchorPane.bottomAnchor="75.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label id="label" layoutX="85.0" layoutY="139.0" text="Topic:" />
+      <Label id="label" layoutX="57.0" layoutY="210.0" text="Contents:" />
+      <JFXButton id="btnBack" layoutX="55.0" layoutY="355.0" onAction="#back" prefHeight="27.0" prefWidth="60.0" text="BACK" AnchorPane.bottomAnchor="16.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Label id="label" layoutX="290.0" layoutY="22.0" text="Status: " />
+      <Label id="label" fx:id="labelStatus" layoutX="350.0" layoutY="22.0" />
+      <JFXTextField id="textField" fx:id="textRecipients" editable="false" layoutX="166.0" layoutY="72.0" maxWidth="426.0" minWidth="426.0" prefHeight="31.0" prefWidth="426.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="8.0" />
+      <JFXButton id="btnSend" layoutX="36.0" layoutY="215.0" onAction="#restore" prefHeight="49.0" prefWidth="99.0" text="RESTORE" AnchorPane.bottomAnchor="136.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label id="label" layoutX="382.0" layoutY="7.0" text="Date:" AnchorPane.rightAnchor="190.0" />
+      <Label id="label" fx:id="labelDate" layoutX="505.0" layoutY="7.0" AnchorPane.rightAnchor="9.0" />
+      <Label id="label" layoutX="306.0" layoutY="33.0" text="Date removed:" AnchorPane.rightAnchor="190.0" />
+      <Label id="label" fx:id="labelDateRemoved" layoutX="505.0" layoutY="33.0" AnchorPane.rightAnchor="9.0" />
+      <Label layoutX="174.0" layoutY="369.0" text="Find word:" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="174.0" />
+      <JFXTextField fx:id="textSearchByWord" layoutX="230.0" layoutY="362.0" maxWidth="97.0" minWidth="97.0" prefHeight="31.0" prefWidth="97.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="230.0" />
+      <JFXButton id="btnSearchByWord" layoutX="331.0" layoutY="365.0" onAction="#searchByWord" text="SEARCH" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="331.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnSaveOnStage" fx:id="btnSaveOnStage" layoutX="406.0" layoutY="365.0" onAction="#saveOnStage" text="SAVE ON STAGE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="406.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXSlider fx:id="sliderFontSize" layoutX="531.0" layoutY="371.0" prefHeight="14.0" prefWidth="110.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="531.0" />
+      <TextField fx:id="textFontSize" layoutX="656.0" layoutY="365.0" onKeyReleased="#keyReleasedInTextFontSize" prefHeight="25.0" prefWidth="35.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="656.0" />
+   </children>
+</AnchorPane>
