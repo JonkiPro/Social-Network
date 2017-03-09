@@ -31,6 +31,10 @@ License
 ----
 All images are licensed [Creative Commons].
 
+# Design
+![myproject](https://cloud.githubusercontent.com/assets/26285741/23729891/b8ed8d16-0464-11e7-9927-848d5de93050.png)
+
+
 
 [JFoenix]: <http://www.jfoenix.com/>
 [ControlsFX]: <http://fxexperience.com/controlsfx/>
@@ -39,5 +43,3 @@ All images are licensed [Creative Commons].
 [Maven]: <https://maven.apache.org/>
 [Creative Commons]: <https://creativecommons.org/>
 
-# Design
-![myproject](https://cloud.githubusercontent.com/assets/26285741/23729246/13876624-0461-11e7-9c42-eefddaf72ae9.png)
